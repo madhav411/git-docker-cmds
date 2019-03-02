@@ -1,0 +1,66 @@
+                                                    Docker Commands
+
+docker --version/docker -v/docker version:
+     To check whether docker is installed or not
+
+docker-machine --version:
+    To check whether docker-machine is installed or not
+
+docker-compose --version:
+    To check whether docker-compose is installed or not
+
+docker pull imagename(hello-world):
+   Command used to pull a image from dockerhub
+
+docker images:
+    It shows the images that are present in the docker
+
+docker images -q:
+    It shows only the image id's
+
+docker run imagename(hello-world):
+   Command used to run the image that we are pulled
+   *Whenever we run the image,A Container will be created on top of that image
+
+docker ps:
+    It shows the information about running containers
+
+docker ps -a:
+    It shows the information about both running and stopped containers
+
+docker run -it imagename(centos)
+    Command used to run an image in an interactive terminal mode(Container will be created and we are going inside the container)
+  --->To come out of this contianer,Press 'exit'
+           (Container will be stopped)
+
+docker run -it imagename(centos)
+    Command used to run an image in an interactive terminal mode(Container will be created and we are going inside the container)
+  --->To come out of this contianer,Press ctrl+pq
+          (Container will be up and running)
+
+docker run -itd imagename(xxx)
+   Command used to run an image in an interactive terminal detached mode(Container will be created and we are not going inside the contianer)
+ --->For going inside the running the container:
+                docker attach cid(Container-id)
+
+docker run -itd -p 8080[redirecting port number]:8080[actual port number] jenkins(imagename)
+    Command used to run jenkins image and access through webpage
+
+docker run -itd -p 80[redirecting port number]:80[actual port number] nginx(imagename)
+   Command used to run nginx and the nginx image and access through webpage
+
+docker volumes:
+
+docker run -itd -v source address(Ex:/opt/madhav):destination address(Ex:/opt/madhavi) imagename(centos)
+          [local host ----> container]
+
+docker run -itd --volumes-from "source cid" "imagename"
+          [container-1 ---> container-2]
+
+docker volume ls
+   To list the existed volumes
+
+ 
+
+
+   
