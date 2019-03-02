@@ -57,7 +57,7 @@ docker run -itd -v source address(Ex:/opt/madhav):destination address(Ex:/opt/ma
 docker run -itd --volumes-from "source cid" "imagename"
           [container-1 ---> container-2]
 
-docker volume ls
+docker volume ls:
    To list the existed volumes
 
  
