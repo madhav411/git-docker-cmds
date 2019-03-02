@@ -1,0 +1,56 @@
+                                                    git commands
+#mkdir xxx(Directory name)
+
+#cd xxx(Directory name)
+--------------------------------------------------------------------------------------------------
+ #git init
+   ---->Empty git repository is created
+
+ #touch/vi/vim yyy(File name)
+  {
+   write something in that
+  }
+
+ git status
+  ---->message:"untracked files"
+
+      (Means whichever file we created is in Working area)       
+      
+      yyy(FN)=red colour
+-----------------------------------------------------------------------------------------------------
+ #git add yyy(FN)
+
+  git status
+  ---->message:"changes to be committed"
+                 
+      (Means whichever file we created is in Staging area/Index area)
+        
+      yyy(FN)=green colour
+--------------------------------------------------------------------------------------------------------------
+ git commit -m "label msg" yyy(FN)
+  ---->message:on branch master
+               Nothing to commit
+      (File is moved to local repository)
+ git log
+   --->For every commit we made to local repo,A Commit id is created
+   message:commit id:xxxxxxxxxxxxxxxxxxxx
+
+ git show commit-id
+   --->It shows the file that we committed to local repo 
+---------------------------------------------------------------------------------------------------------------
+git reset --soft commit-id
+   (code in the local repository is shifted to Staging/index area)
+
+git reset head yyy(FN)
+   (code in the staging/index area is shifted to Working area)
+
+git reset --mixed commit-id
+   (code in the local repository is shifted to working area directly)
+---------------------------------------------------------------------------------------------------------------
+
+When ever u created a file or modified a file,It will be in the "Working area" defaultly.
+
+  -->To move a "modified" file from Working area to Local repository at a time(working area->staging area->local repository)
+    
+       git commit -a -m "label msg"
+---------------------------------------------------------------------------------------------------------  
