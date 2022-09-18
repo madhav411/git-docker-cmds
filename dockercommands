@@ -1,26 +1,28 @@
-                                                    Docker Commands
+Docker Commands
+===============
+- To check whether docker is installed or not:
+  docker --version or docker -v or docker version
 
-docker --version/docker -v/docker version:
-     To check whether docker is installed or not
+- To check whether docker-machine is installed or not:
+  docker-machine --version
 
-docker-machine --version:
-    To check whether docker-machine is installed or not
+- To check whether docker-compose is installed or not:
+  docker-compose --version
 
-docker-compose --version:
-    To check whether docker-compose is installed or not
+- Command used to pull a image from Docker Hub:
+  docker pull <image-name>
+  Ex: docker pull nginx
+   
+- It shows the images that are present in the server:
+  docker images or docker image ls
 
-docker pull imagename(hello-world):
-   Command used to pull a image from dockerhub
-
-docker images:
-    It shows the images that are present in the docker
-
-docker images -q:
-    It shows only the image id's
-
-docker run imagename(hello-world):
-   Command used to run the image that we are pulled
-   *Whenever we run the image,A Container will be created on top of that image
+- It shows only the image id's:
+  docker images -q
+    
+- Command used to run the image that we are pulled:
+  docker run <image-name>
+  Ex: docker run hello-world
+  Whenever we run the image,A Container will be created on top of that image
 
 docker ps:
     It shows the information about running containers
@@ -59,8 +61,3 @@ docker run -itd --volumes-from "source cid" "imagename"
 
 docker volume ls:
    To list the existed volumes
-
- 
-
-
-   
